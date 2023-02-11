@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
-const port=8080;
+const port=process.env.PORT || 6010;
 const router = require('./routers/booking');
 const cors = require('cors');
 app.use(cors());
