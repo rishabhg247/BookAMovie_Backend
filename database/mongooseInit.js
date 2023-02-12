@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { bookMovieSchema } = require('../modals/schema');
-const MongoUrl="mongodb://localhost:27017/" + "bookMovie";
+const MongoUrl="mongodb+srv://blog:blog@cluster1.4kanwur.mongodb.net/test";
 
 mongoose.connect(MongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => { 
