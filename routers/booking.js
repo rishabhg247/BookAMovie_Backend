@@ -22,6 +22,10 @@ router.post("/api/booking", async (req, res) => {
     await Booking.find().exec((err,data)=>{err?res.send(err):res.send(data[data.length-1])});
     return res.status(200);
   })
+ //delete api..
+ router.delete('/api/booking',async (req,res)=>{
+    await Booking.deleteMany((err,info)=>{err?res.json({err}):res.send('Previous Data deleted Successfully')})
+  })
  //test api..
 router.get('/',(req,res)=>{res.send('Hello..This is test API for my BookAMovie project...');})
   module.exports = router;
